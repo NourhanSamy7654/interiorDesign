@@ -7,6 +7,10 @@
 :root {
   --color-link: #bd562d;
 }
+.dark #reviews {
+  background-color: black;
+  color: white !important;
+}
 .dark {
   background-color: black;
   color: white;
@@ -44,7 +48,7 @@ a:hover {
 }
 .navbar-custom {
   top: 0;
- font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serifs;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serifs;
   background-color: transparent !important;
   color: var(--color-link);
 }
@@ -58,9 +62,10 @@ a:hover {
 
 .navbar-custom .navbar-nav .nav-link:hover {
   color: rgb(36, 98, 99);
-  border-radius: 20%;
-  background: transparent;
-  border: 3px solid bisque;
+  background: #bd562d;
+  /* background: transparent; */
+  border-radius: 16px;
+  border: 1px solid bisque;
 }
 h5 {
   font-family: "Abril Fatface", serif;
@@ -69,7 +74,7 @@ h4 {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 h2 {
-  font-family: "Crete Round", serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-weight: 400;
   font-style: normal;
   color: #333;
@@ -207,12 +212,6 @@ body {
 /* Reviews Section */
 #reviews {
   background-color: #f8f9fa;
-}
-
-#reviews h2 {
-  font-size: 2rem;
-  font-weight: 600;
-  color: #333;
 }
 
 #reviews .card {

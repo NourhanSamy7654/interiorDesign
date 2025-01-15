@@ -17,13 +17,22 @@ darks.addEventListener("click", function () {
 //   clearInterval(setinter);
 //   alert("clear succes!");
 // }, 2000);
-const username = localStorage.getItem("username");
+const username = sessionStorage.getItem("username");
 if (username) {
-  const welcomecontainter = document.getElementById("welcome-container");
+  // Ensure these elements exist in the DOM
+  const welcomeContainer = document.getElementById("welcome-container");
   const usernameDisplay = document.getElementById("usernameDisplay");
-  usernameDisplay.textContent = username;
-  welcomecontainter.style.display = "block";
-  setTimeout(() => {
-    welcomecontainter.style.display = "none";
-  }, 3000);
+
+  if (welcomeContainer && usernameDisplay) {
+    usernameDisplay.textContent = username; // Display the username
+    welcomeContainer.style.display = "block"; // Show the container
+
+    // Hide the container after 5 seconds
+    setTimeout(() => {
+      welcomeContainer.style.display = "none";
+    }, 5000);
+  } else {
+    console.error("Elements with IDs 'welcome-container' or 'usernameDisplay' are missing.");
+  }
 }
+
