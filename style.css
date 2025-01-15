@@ -7,6 +7,10 @@
 :root {
   --color-link: #bd562d;
 }
+#welcome-container {
+  display: none; /* مخفي افتراضيًا */
+}
+
 .dark #reviews {
   background-color: black;
   color: white !important;
